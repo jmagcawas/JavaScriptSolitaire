@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <title>Solitaire</title>
+    <head>
+        <style type="text/css">
+        html, body { margin: 0; padding: 0; }
+        #backbuffer{
+            height: 100%;
+            width:100%;
+            background-color: hsl(147, 56%, 29%);
+        }
+        img{
+            width: 220px;
+            height: 277px;
+        }
+        </style>
+
+        <script src="Suites.js"></script>
+        <script src="Ranks.js"></script>
+        <script src="Graphics.js"></script>
+        <script src="Card.js"></script>
+    </head>
+    <body>
+        <p>Image to use:</p>
+        <img id="scream" src="JPEG/AS.jpg" alt="The Scream">
+        <canvas id="backbuffer"></canvas>
+        <script>
+            // var myImage = new Image(150, 100);
+            // myImage.src = "JPEG\AS.jpg";
+            // aceOfSpades = new Card("Spades","Ace",myImage);
+            
+            var c = document.getElementById("backbuffer");
+            var ctx = c.getContext("2d");
+            // var myImage = new Image(150, 100);
+            // myImage.src = "JPEG\AS.jpg";
+            var img = document.getElementById("scream");
+
+            ctx.drawImage(img, 10, 10);
+        </script>
+    </body>
+</html>
