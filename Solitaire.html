@@ -19,10 +19,17 @@
         <script src="Ranks.js"></script>
         <script src="Graphics.js"></script>
         <script src="Card.js"></script>
+        <script src="CardImage.js"></script>
     </head>
     <body>
+        <p>Demonstration of how to add a method in a JavaScript Class.</p>
 
-        <canvas id="backbuffer"></canvas>
-        
+        <p id="demo"></p>
+        <script>
+            
+            var deck = Card.CreateDeck();
+            document.getElementById("demo").innerHTML = deck;
+
+        </script>
     </body>
 </html>

@@ -3,11 +3,11 @@ class Card{
     static foundationNumber = 4;
     static manueverNumber = 7;
 
-    constructor(suites,rank,cardImage){
+    constructor(suites,rank){
         this.suites = suites;
         this.rank = rank;
-        this.faced = false;
         this.cardImage = cardImage;
+        this.faced = false;
 
     }
 
@@ -15,10 +15,16 @@ class Card{
         var deck = [];
         for(var suite in Suites){
             for(var rank in Ranks){
-                deck.push(new Card(suite,rank));
+                deck.push(new Card(suite,rank,CardImage[suite][rank]));
             }
         }
+        return deck;
     }
+    static Present(){
+       return "I have a " + this.cardImage;
+
+    }
+
 
     static CreateWaste(){
        return [];
